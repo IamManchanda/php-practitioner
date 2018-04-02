@@ -27,4 +27,4 @@ $tasks = [
 
 $tasks[0] -> complete();
 
-require 'index.view.php';
+require 'templates/index.view.php';
