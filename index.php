@@ -1,30 +1,15 @@
 <?php
 
+// Functions
 require 'functions/dd.php';
 
-class Task {
-  public $description;
-  public $completed = false;
+// Classes
+require 'classes/Task.php';
 
-  public function __construct($description) {
-    $this -> description = $description;
-  }
+// Bootstrap
+$dbQuery = require 'bootstrap.php';
 
-  public function complete() {
-    $this -> completed = true;
-  }
+$tasks = $dbQuery -> selectAll('todos', 'Task');
 
-  public function isComplete() {
-    return $this -> completed;
-  }
-}
-
-$tasks = [
-  new Task('Go to the store'),
-  new Task('Finish my screencast'),
-  new Task('Clean my room'),
-];
-
-$tasks[0] -> complete();
-
+// Templates
 require 'templates/index.view.php';
