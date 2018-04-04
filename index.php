@@ -1,12 +1,15 @@
 <?php
 
+// Functions
 require 'functions/dd.php';
-require 'functions/connectToDb.php';
-require 'functions/fetchAllTasks.php';
 
+// Classes
 require 'classes/Task.php';
 
-$pdo = connectToDB();
-$tasks = fetchAllTasks($pdo);
+// Bootstrap
+$dbQuery = require 'bootstrap.php';
 
+$tasks = $dbQuery -> selectAll('todos', 'Task');
+
+// Templates
 require 'templates/index.view.php';
