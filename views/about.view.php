@@ -1,5 +1,5 @@
 <?php require 'partials/head.php'; ?>
 
-  <h1>About <?= $name; ?></h1>
+  <h1>About <?= $companyName ?></h1>
 
 <?php require 'partials/foot.php'; ?>
