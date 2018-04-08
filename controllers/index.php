@@ -1,6 +1,6 @@
 <?php
 
-$tasks = $dbQuery -> selectAll('todos', 'Task');
+$users = $dbQuery -> selectAll('users', 'Task');
 
 // Templates
 require 'views/index.view.php';
