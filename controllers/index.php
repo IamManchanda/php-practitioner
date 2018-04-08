@@ -1,6 +1,6 @@
 <?php
 
-$users = $dbQuery -> selectAll('users', 'Task');
+$users = App::get('database') -> selectAll('users', 'Task');
 
 // Templates
 require 'views/index.view.php';

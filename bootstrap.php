@@ -1,14 +1,17 @@
 <?php
 
-$app = [];
+App::bind('config', require 'config.php');
 
-// Config
-$app['config'] = require 'config.php';
+App::bind('database', new QueryBuilder(
+  Connection::make(App::get('config')['database'])
+));
 
-// Query Builder
-$app['database'] = new QueryBuilder(
-  Connection::make($app['config']['database'])
-);
+// $config = App::get('config');
 
-return $app['database'];
+// // Query Builder
+// $app['database'] = new QueryBuilder(
+//   Connection::make($app['config']['database'])
+// );
+
+// return $app['database'];
 
