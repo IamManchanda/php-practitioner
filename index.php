@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\{Router, Request, Task};
+
 // Functions
 require 'functions/dd.php';
 require 'functions/view.php';

@@ -11,6 +11,8 @@ class QueryBuilder {
     $statement = $this -> pdo -> prepare("SELECT * FROM $table");
     $statement -> execute();
 
+    $intoClass = "App\Core\\$intoClass";
+
     return $statement -> fetchAll(PDO::FETCH_CLASS, $intoClass);
   }
 
