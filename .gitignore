@@ -2,3 +2,6 @@
 
 # config
 config.php
+
+#Composer
+vendor

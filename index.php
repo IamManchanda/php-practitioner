@@ -3,6 +3,9 @@
 // Functions
 require 'functions/dd.php';
 
+// Dependencies
+require 'vendor/autoload.php';
+
 // Bootstrap
 $dbQuery = require 'bootstrap.php';
 
